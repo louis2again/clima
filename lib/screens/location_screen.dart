@@ -45,6 +45,7 @@ class _LocationScreenState extends State<LocationScreen> {
     });
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
@@ -85,7 +86,7 @@ class _LocationScreenState extends State<LocationScreen> {
                           },
                         ),
                       );
-                      if (typedName != Null) {
+                      if (typedName != null) {
                         var weatherData =
                             await weather.getCityWeather(typedName);
                         updateUI(weatherData);
